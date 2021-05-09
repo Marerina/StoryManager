@@ -10,6 +10,7 @@ namespace StoryManager
     {
         string _name;
         string _path;
+        Character[] characters;
 
     }
 }
