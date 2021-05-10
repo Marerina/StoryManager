@@ -7,7 +7,7 @@ using System.IO;
 
 namespace StoryManager
 {
-    public enum FieldType { Строка, Число, Логическое, Дата }
+    public enum FieldType { Строка, Число, Логическое, Дата, Файл }
     public class Field
     {
         FieldType _type;
@@ -16,6 +16,7 @@ namespace StoryManager
         bool _bool_value;
         float _float_value;
         DateTime _datetime_value;
+        Files _files_value;
         public Field(string name, string value)
         {
             _type = FieldType.Строка;
@@ -46,6 +47,12 @@ namespace StoryManager
             _datetime_value = value;
             _name = name;
         }
+        public Field(string name, Files value)
+        {
+            _type = FieldType.Файл;
+            _files_value = value;
+            _name = name;
+        }
         public string Name { get { return _name; } set { _name = value; } }
         public object GetValue()
         {
@@ -70,6 +77,11 @@ namespace StoryManager
                 case (FieldType.Число):
                     {
                         o = (object)_float_value;
+                        break;
+                    }
+                case (FieldType.Файл):
+                    {
+                        o = (object)_files_value;
                         break;
                     }
             }
