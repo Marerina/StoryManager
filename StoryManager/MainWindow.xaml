@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StoryManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="900">
+        Title="MainWindow" Height="650" Width="900" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -19,7 +19,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="list_characters"/>
+            <ListBox x:Name="list_characters" SelectionChanged="list_characters_SelectionChanged"/>
             <Grid Grid.Column="1"/>
         </Grid>
         <Grid>
@@ -30,6 +30,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <ComboBox x:Name="comboBox_StoryList" />
+            <Button x:Name="button_properties" Content="Настройки" Grid.Column="3" Click="button_properties_Click" FontSize="14" />
 
         </Grid>
 

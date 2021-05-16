@@ -17,7 +17,7 @@ namespace StoryManager
         public string Path { get { return _path; } set { _path = value; } }
         public List<Character> Chatacters { get { return _characters; } set { _characters = value; } }
         public List<StoryLine> StoryLines { get { return _lines; } set { _lines = value; } }
-
+        public List<Chapter> Chapters { get { return _chapters; } set { _chapters = value; } }
 
     }
 }

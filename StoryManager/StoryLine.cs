@@ -62,7 +62,13 @@ namespace StoryManager
         List<Episode> episodes;
         List<Chapter> chapters;
         string _name;
-
+        Link _folder;
+        public StoryLine(Link link)
+        {
+            Name = link.Name;
+            _folder = link;
+        }
+        public string Name { get { return _name; } set { _name = value; } }
 
     }
 }

@@ -103,6 +103,10 @@ namespace StoryManager
         {
             return File.Exists(path);
         }
+        public  bool Check()
+        {
+            return File.Exists(Path);
+        }
     }
     class Character
     {
